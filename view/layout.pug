@@ -1,0 +1,89 @@
+doctype html
+html(lang="en")
+
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Dookies
+    link(rel="icon", type="image/png", href="/img/dookiesLogo.png")
+    link(rel="stylesheet", href="/css/index.css")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,500;1,200&family=Indie+Flower&display=swap", rel="stylesheet")
+
+  body
+    header.header.container
+      .dropdownMenu
+        i.fa-solid.fa-bars.fa-lg#dropdownBtn(style="color: #000000")
+        nav.header-main-nav
+          .menu-list
+            a.menu-link(href="./pages/store.html", target="") Tienda
+            a.menu-link(href="#", target="") Quienes somos
+            a.menu-link(href="#", target="") Contacto
+
+      .header-logo
+
+      .header-user-actions
+        i.fa-regular.fa-star.user-menuBtn#favBtn(style="color: #000000")
+        i.fa-solid.fa-cart-shopping.user-menuBtn#cartBtn(style="color: #000000")
+
+    .cart.displayHidden
+      .cartInfo
+        p No has agregado ningun producto al carrito
+
+    .favProducts.displayHidden#favProducts
+      .favProducts-info
+        p No has agregado ningun producto como favorito
+
+    main.container
+      section.hero
+        .hero-textbox
+          b
+            p.hero-title Snacks frescos y saludablos
+          p.hero-subtitle solo lo mejor
+            br
+            | para tus peludos
+          a.hero-button(href="./pages/store.html") Ir a la tienda
+
+      h2.text-pre-section ¿Conoces nuestros productos?
+
+      section.collections.container
+        .slider
+          .collection-card
+            .collection-card-img
+              img(src="/src/miloplato.jpg", alt="")
+            .collection-card-desc
+              a(href="#") Galletas ->
+          .collection-card
+            .collection-card-img
+              img(src="/src/icecream.jpg", alt="")
+            .collection-card-desc
+              a(href="#") Paletas ->
+          .collection-card
+            .collection-card-img
+              img(src="/src/birthday.avif", alt="")
+            .collection-card-desc
+              a(href="#") Pasteles ->
+
+    footer.container
+      .contacto-card
+        h4 Teléfono
+        h4 Quejas y reclamos:
+        p 3196187314
+        h4 Contacto por WhatsApp:
+        i.fa-brands.fa-whatsapp
+        p 319187314
+
+      .contacto-card
+        h4 Email
+        i.fa-regular.fa-envelope
+        h5 dookiesstores@gmail.com
+
+      .contacto-card
+        h4 Sobre nosotros
+        a(href="") Instagram
+        a(href="") TikTok
+        a(href="") Quienes somos
+
+    script(type="module", src="app.js")
+    script(src="https://kit.fontawesome.com/cf733db6d2.js", crossorigin="anonymous")
