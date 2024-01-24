@@ -5,6 +5,7 @@ import cors from "cors";
 import morgan from "morgan";
 
 const app= express()
+const router= express.Router()
 const port= 3000
 
 app.use(cors());
@@ -18,8 +19,8 @@ app.use(express.json());
 app.use(express.static(path.join(process.cwd(), "./public")))
 app.use(express.urlencoded({extended:false}))
 
-app.get("/index", (req, res)=>{
-    res.render("layout")
+app.get("/", (req, res)=>{
+    res.render("index")
 })
 
 

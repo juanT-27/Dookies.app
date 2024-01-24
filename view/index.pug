@@ -1,0 +1,31 @@
+extends layout.pug 
+block content
+  main.container
+  section.hero
+    .hero-textbox
+      b
+        p.hero-title Snacks frescos y saludables
+        p.hero-subtitle solo lo mejor
+          br
+          | para tus peludos
+        a.hero-button(href="./store") Ir a la tienda
+
+  h2.text-pre-section ¿Conoces nuestros productos?
+
+  section.collections.container
+    .slider
+      .collection-card
+        .collection-card-img
+          img(src="img/miloplato.jpg", alt="")
+        .collection-card-desc
+          a(href="#") Galletas ->
+      .collection-card
+        .collection-card-img
+          img(src="img/icecream.jpg", alt="")
+        .collection-card-desc
+          a(href="#") Paletas ->
+      .collection-card
+        .collection-card-img
+          img(src="img/birthday.avif", alt="")
+        .collection-card-desc
+          a(href="#") Pasteles ->
