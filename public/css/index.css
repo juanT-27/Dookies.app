@@ -224,9 +224,8 @@ color: var(--secondary-color);
 
 #dropdownBtn{
   background-image: url(/img/menu.png);
-  width: 4rem;
-  height: 1rem;
-  background-color: var(--secondary-color);
+  width: 2rem;
+    background-color: var(--secondary-color);
 }
 
 #dropdownBtn:hover{
@@ -261,7 +260,7 @@ justify-content: space-between;
 color: var(--white-color);
 }
 .filterGroup select{
-background-color: var(--tertiary-color);
+background-color: var(--primary-color);
 color: var(--white-color);
 font-family: var(--font-family-primary) ;
 width: 5rem;
@@ -563,8 +562,8 @@ margin-top: 6rem ;
 
 /* U */
 .user-menuBtn{
-width: 4rem;
-height: 1rem;
+width: 2rem;
+
 text-align: center;
 margin: 0 .5rem;
 background-color: var(--secondary-color);

@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  main.container
+    div.products-nav.flex-full-center.container
+      h3 categorias de productos
+      form.filterForm(action="")
+        .filterGroup
+          select(name="", id="")
+            option(value="") ingredientes
+            option(value="higado") Higado
+            option(value="pollo") pollo
+            option(value="zanahoria") zanahoria
+            option(value="calabacin") calabacin
+
+        .filterGroup
+          select(name="", id="")
+            option(value="") Precios
+            option(value="mayor") De mayor a menor
+            option(value="menor") de menor a mayor
+
+        .filterGroup
+          select(name="", id="")
+            option(value="") todos
+            option(value="grandes") Perros grandes
+            option(value="medianos") Perros Medianos
+            option(value="pequenos") Perros pequeños

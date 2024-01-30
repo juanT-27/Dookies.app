@@ -1,11 +1,12 @@
-import  express  from "express"
+import express from "express"
 import path from "path";
 import helmet from "helmet";
 import cors from "cors";
 import morgan from "morgan";
 
+import pagesRouter from "./routes/pagesRoutes.js";
+
 const app= express()
-const router= express.Router()
 const port= 3000
 
 app.use(cors());
@@ -19,11 +20,8 @@ app.use(express.json());
 app.use(express.static(path.join(process.cwd(), "./public")))
 app.use(express.urlencoded({extended:false}))
 
-app.get("/", (req, res)=>{
-    res.render("index")
-})
-
+app.use("/page", pagesRouter)
 
 app.listen(port, ()=>{
-    console.log("app on port" + port)
+    console.log(`localhost:${port}/page/home`)
 });
