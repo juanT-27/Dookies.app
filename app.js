@@ -5,6 +5,8 @@ import cors from "cors";
 import morgan from "morgan";
 
 import pagesRouter from "./routes/pagesRoutes.js";
+import productsRouter from "./routes/productsRoutes.js";
+import conection from "./connection/mongodb.js";
 
 const app= express()
 const port= 3000
@@ -21,7 +23,9 @@ app.use(express.static(path.join(process.cwd(), "./public")))
 app.use(express.urlencoded({extended:false}))
 
 app.use("/page", pagesRouter)
+app.use("/product", productsRouter)
 
+conection()
 app.listen(port, ()=>{
     console.log(`localhost:${port}/page/home`)
 });

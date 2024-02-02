@@ -1,5 +1,5 @@
 import express from "express";
-import productsData from "../public/scripts/productsBs.js";
+// import productsData from "../public/scripts/productsBs.js";
 const pagesRouter= express.Router();
 
 

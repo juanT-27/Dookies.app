@@ -25,3 +25,19 @@ block content
             option(value="grandes") Perros grandes
             option(value="medianos") Perros Medianos
             option(value="pequenos") Perros pequeños
+
+    div.row#products-container
+      if products.length <= 0
+        h3 No hay productos disponibles 
+      else 
+        each product in products 
+          .oneCol-sm.product-card.flex-full-center
+            img(src=product.img, alt=product.title).product-card-img.background-center
+
+            .product-card-info
+              p.product-card-title= product.title
+              p.product-card-price= product.price
+
+            .product-card-actions
+              i.fa-regular.fa-eye(product-id= product.id)
+              i.fa-solid.fa-cart-shopping.product-cartBtn
