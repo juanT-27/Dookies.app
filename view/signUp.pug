@@ -1,0 +1,23 @@
+extends layout
+block content
+    .formContainer.container
+        .formBackgroundImg.background-center
+
+        form#formToSignUp(action="/store", method="post")
+            p.inputGroup 
+                label  Nombre: 
+                input(placeholder="Juan David" type="text" required="true")
+            p.inputGroup 
+                label  Apellidos: 
+                input(placeholder="Torres Urrea" type="text" required="true")    
+            p.inputGroup 
+                label Celular: 
+                input(placeholder="3196187314" type="tel" required="true")
+            p.inputGroup 
+                label Email: 
+                input(placeholder="jtsoftdeveloper@gmail.com" type="email" required="true")
+            p.inputGroup 
+                label contraseña: 
+                input(placeholder="Juan david" type="text" required="true")
+            p.inputGroup 
+                input(type="submit", value="Enviar")
