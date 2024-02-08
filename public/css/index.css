@@ -108,7 +108,7 @@ color: var(--white-color);
 
 
 label{
-  font-family: 'Indie Flower', cursive;
+
   font-weight: 400;
 }
 
@@ -269,6 +269,32 @@ width: 5rem;
 .filterGroup {
 margin: 1rem;
 }
+
+
+/* Forms stilyng */
+
+.formContainer{
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+ 
+}
+#formToSignUp{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+}
+.formBackgroundImg{
+  background-image: url("../img/formBackground.jpg");
+  width: 100%;
+  height: 20vh;
+  background-size: cover;
+
+}
 .formToAddUnits{
 width: 4rem;
 margin: 1rem 0;
@@ -392,7 +418,26 @@ color: var(--white-color);
 
 
 /* I */
+.inputGroup{
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: center;
+  
+}
 
+.inputGroup label{
+  color: var(--secondary-color);
+}
+
+.inputGroup input{
+  margin:15px 0;
+	padding:15px 10px;
+	width:100%;
+	outline:none;
+	border:1px solid #bbb;
+	border-radius:20px;
+	display:inline-block;
+}
 
 /* J */
 /* K */
@@ -612,6 +657,10 @@ background-color:rgb(219, 219, 112);
 
   .productSmallImg{
     width: 7rem;
+  }
+
+  #dropdownBtn{
+    display: none;
   }
 .dropdownMenu{
   display: flex;

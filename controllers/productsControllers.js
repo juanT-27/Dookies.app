@@ -1,5 +1,5 @@
 import { response } from "express";
-import Product from "../models/products.js";
+import Product from "../models/productsModel.js";
 
 const postNewProduct = async (req, res, next)=>{
     try {
@@ -31,4 +31,15 @@ const postNewProduct = async (req, res, next)=>{
     }
 };
 
-export {postNewProduct}
+const getAll= async(req, res)=>{
+    try {
+        const allProducts= await Product.find()
+        if(allProducts.length <= 0){
+            res.send("No products available")
+        } return res.status(200).send(allProducts)
+    } catch (error) {
+        console.log(error.message)
+    }
+}
+
+export {postNewProduct, getAll}
